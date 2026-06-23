@@ -105,7 +105,7 @@ public class Principal {
      * Marca a matrícula com -1 o aluno excluído.
      */
     public static void excluir() {
-        System.out.print("Informe a matrícula do aluno a ser ecluído: ");
+        System.out.print("Informe a matrícula do aluno a ser excluído: ");
         String matricula = sc.nextLine();
         
         //Controla se encontrou ou não o registro para ecluir
@@ -133,11 +133,11 @@ public class Principal {
                 //Salva a linha no arquivo temporário
                 bw.write(linha);
                 bw.newLine();
-
-                //Fecha os arquivos
-                br.close();
-                bw.close();
             }
+            //Fecha os arquivos
+            br.close();
+            bw.close();
+            
         } catch (IOException e) {
             System.out.println("Erro: " + e.getMessage());
             return;
@@ -199,12 +199,11 @@ public class Principal {
                 //Escreve a linha no arquivo
                 bw.write(linha);
                 bw.newLine();
-                
-                //Fecha os arquivos
-                br.close();
-                bw.close();
-            }
-
+            }    
+            //Fecha os arquivos
+            br.close();
+            bw.close();
+            
         } catch (IOException e) {
             System.out.println("Erro: " + e.getMessage());
             return;
